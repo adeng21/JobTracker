@@ -1,0 +1,28 @@
+<div class="row">
+  <%= link_to "Create a new job to track!", new_job_path, class: 'button small' %>
+
+  <table>
+    <thead>
+      <th> Position</th>
+      <th> Company</th>
+      <th> Location</th>
+      <th> Application Date</th>
+      <th> Interest Level</th>
+      <th> Status</th>
+    </thead>
+    <tbody>
+      <%@jobs.each do |job| %>
+      <tr>
+        <td><%= link_to job.position, job_path(job)%></td>
+        <td><%=job.company%></td>
+        <td><%=job.location%></td>
+        <td><%=job.application_date%></td>
+        <td><%=job.interest_level%></td>
+        <td><%=job.status%></td>
+        <td><%= link_to "Update", edit_job_path(job)%></td>
+        <td><%=link_to "Delete", method: :delete, data: {confirm: "Are you sure?"}%></td>
+      </tr>
+      <%end%>
+    </tbody>
+  </table>
+</div>

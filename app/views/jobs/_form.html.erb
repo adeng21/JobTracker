@@ -1,0 +1,13 @@
+<%=simple_form_for @job do |f| %>
+  <%= f.input :position %>
+  <%= f.input :company%>
+  <%= f.input :location%>
+  <%= f.input :job_description%>
+  <%= f.input :job_posting_url, required: false%>
+  <%= f.input :application_date, required: false%>
+  <%= f.input :application_email, required: false%>
+  <%= f.input :application_contact, required: false%>
+  <%= f.input :status%>
+  <%= f.input :interest_level, collection: 1..5%>
+  <%= f.button :submit%>
+<%end%>

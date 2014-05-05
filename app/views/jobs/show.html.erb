@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="job-show">
+  <ul>
+    <li><strong>Position:</strong> <%=@job.position%></li>
+    <li><strong>Company:</strong> <%=@job.company%></li>
+    <li><strong>Location:</strong> <%=@job.location%></li>
+    <li><strong>Status:</strong> <%=@job.status%></li>
+    <li><strong>Interest Level:</strong> <%=@job.interest_level%></li>
+    <li><strong>Application Date:</strong> <%=@job.application_date%></li>
+    <li><strong>Application Email:</strong> <%=@job.application_email%></li>
+    <li><strong>Application Contact:</strong> <%=@job.application_contact%></li>
+    <li><strong>Job Description</strong> <%=simple_format(@job.job_description)%></li>
+    <li><strong>Job URL</strong> <%=@job.job_posting_url%></li>
+  </ul>
+
+  <%=link_to "Back to Jobs", jobs_path, class: 'button small'%>
+
+
+  </div>
+</div>

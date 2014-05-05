@@ -1,0 +1,7 @@
+.job-show ul{
+  list-style-type: none;
+}
+
+.job-show li {
+  margin: 10px;
+}
