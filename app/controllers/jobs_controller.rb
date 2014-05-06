@@ -2,7 +2,7 @@ class JobsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @jobs = Job.all
+    @jobs = Job.order_by_newest
   end
 
   def new
