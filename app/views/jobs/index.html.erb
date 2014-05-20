@@ -19,6 +19,7 @@
         <td><%=job.application_date%></td>
         <td><%=job.interest_level%></td>
         <td><%=job.status%></td>
+        <td><%=job.follow_up_date%></td>
         <td><%= link_to "Update", edit_job_path(job)%></td>
         <td><%=link_to "Delete", method: :delete, data: {confirm: "Are you sure?"}%></td>
       </tr>
